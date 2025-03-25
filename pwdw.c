@@ -15,7 +15,7 @@ int main()
     char *dir = strtok(path, del);
     if (strcmp(dir, "mnt"))
     {
-        fprintf(stderr, "This untility can be used only in Windows native directiories (mounted to /mnt).\n");
+        fprintf(stderr, "This untility can used be only in Windows native directiories (mounted to /mnt).\n");
         return EXIT_FAILURE;
     }
 

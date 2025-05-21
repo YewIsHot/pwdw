@@ -39,9 +39,21 @@ int main()
         strcat(winPath, "\\");
         strcat(winPath, dir);
     }
+
+    // Copiyng to Windows clipboard
+    FILE *clipboard = popen("clip.exe", "w");
+    if (clipboard == NULL)
+    {
+        fprintf(stderr, "Copy to clipboard failed!\n");
+        return EXIT_FAILURE;
+    }
+
+    fwrite(winPath, sizeof(char), strlen(winPath), clipboard);
+    pclose(clipboard);
     
     // Printing the result
     printf("%s\n", winPath);
+    printf("[!] Copied to clipboard.\n");
 
     return EXIT_SUCCESS;
 }

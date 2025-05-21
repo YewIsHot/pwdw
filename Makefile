@@ -1,5 +1,5 @@
 CC=gcc
-STD=c17
+STD=gnu11
 
 PREFIX=/usr/local/bin
 

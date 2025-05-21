@@ -1,5 +1,5 @@
 # WSL utility for printing path in Windows style
-- Works only for directories in Windows (sub directories of `/mnt`)
+- Works only for directories on Windows (sub directories of `/mnt`)
 
 # Requirements
 - `gcc` - compilation

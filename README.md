@@ -1,5 +1,11 @@
 # WSL utility for printing path in Windows style
-- Works only for directories on Windows (sub directories of `/mnt`)
+- Also copies the path into clipboard
+- Paths starting with `\mnt` are printed as windows paths
+    -  e.g. `/mnt/c/Program Files` will be altered to `C:\Program Files`
+- Other paths will start with `\\wsl.localhost\` and distro name
+    - e.g. in `/etc/apt` will print `\\wsl.localhost\<your distro name>\etc\apt`
+    - Distro name is gathered automatically
+        - Curently tested on Ubuntu
 
 # Requirements
 - `gcc` - compilation
